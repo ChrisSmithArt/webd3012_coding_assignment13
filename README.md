@@ -11,15 +11,14 @@ cd webd3012_coding_assignment12
 ```
 
 # DOCKERFILE #
-```
 FROM node:18-alpine
->grabbing node:18
+> grabbing node:18
 
 WORKDIR /smith_chris_ui_garden
->creating the working directory of smith_chris_ui_garden
+> creating the working directory of smith_chris_ui_garden
 
 ENV PATH /smith_chris_ui_garden/node_modules/.bin:$PATH
->declaring the environment path
+> declaring the environment path
 
 COPY package.json ./
 > copying package.json
@@ -34,11 +33,10 @@ RUN npm install react-scripts@3.4.1 -g --silent
 > installing the react scripts silently (so that it doesn't show up in the terminal)
 
 COPY . ./
->???
+> ???
 
 CMD ["npm", "run", "storybook"]
->running Storybook
-```
+> running Storybook
 
 
 # BUILD #
