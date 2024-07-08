@@ -15,6 +15,21 @@ This add all the files for storybook, which allows us to see all of our componen
 
 Afterwhich I manually made the different files within the component library the directories are ```/src/components/.../```
 
+
+Adding testing with ```jest```
+
+```
+npm init jest@latest
+```
+```
+npm install --save-dev jest
+```
+Add babel for jest
+```
+npm install --save-dev @babel/preset-typescript
+```
+
+
 # COMPONENT LIBRARY #
 This project is a component library that has tests and can be viewed within Storybook.
 The components added were the following
@@ -74,6 +89,9 @@ The components added were the following
     > This file contains all the information regarding the variable for our text components.
 
 
+# REQUIREMENTS #
+The proper way to run this project requires Docker Desktop, make sure that both Docker and Docker Desktop is installed.
+
 # CLONE #
 Clone the repository
 ```
@@ -86,26 +104,14 @@ cd webd3012_coding_assignment12
 ```
 
 # TESTING #
-Adding testing with ```jest```
 
-```
-npm init jest@latest
-```
-```
-npm install --save-dev jest
-```
-Add babel for jest
-```
-npm install --save-dev @babel/preset-typescript
-```
 Run the testing command
 ```
 npm run test
 ```
 Testing is down with ```jest```.
 This will run the tests for each component running ```'component_name'.test.tsx``` where the component name is an associated button.
-
-
+Each .test.tsx file has two tests, one for checking visibility and one for checking if the colour has changed due to the disabled state.
 
 # STORYBOOK #
 Run storybook to see the UI Component Library
@@ -143,6 +149,7 @@ CMD ["npm", "run", "storybook"]
 
 
 # BUILD #
+This will build the docker image, so that we can mount it into a container.
 
 ```
 docker build -t csmith11:1.0 .
@@ -150,6 +157,8 @@ docker build -t csmith11:1.0 .
 # RUN #
 
 launch the app with the following command
+This command will mount the docker image from the Build step into a container.
+This will keep the application encapsulated within a Container, where we don't need to worry about conflicts.
 ``` 
 docker run -dp 8083:6006 --name smith_chris_coding_assignment12 csmith11:1.0
 ```
