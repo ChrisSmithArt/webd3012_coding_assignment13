@@ -38,20 +38,23 @@ npm install --save-dev @babel/preset-typescript
 Add Husky for pre-commit checks/hooks
 
 ```
-
+npm install --save-dev husky
+npx husky init
 ```
 
 Add Prettier for code formatting/readability
-```
 
+```
+npm install --save-dev --save-exact prettier
 ```
 
 Put precommit hooks into /.husky/pre-commit file
+
 ```
     npm run eslint . --ext ts,tsx --report-unused-disable-directives
-    npm run prettier . --check 
-    npm run prettier . --write 
-    npm run jest 
+    npm run prettier . --check
+    npm run prettier . --write
+    npm run jest
 ```
 
 Also, in package.json these can be renamed in the following syntax
@@ -66,13 +69,12 @@ Also, in package.json these can be renamed in the following syntax
 
 Adding eslint is not required because building a react app with vite includes eslint out of the box.
 
-
 # GITHUB ACTIONS
-Add a file directory in the root named ```.github``` within that directory add a ```workflows``` folder.
-Within the ```workflows``` folder, add a file, it can be named anything, but the extension must be ```.yml```
 
-Within the ```.yml``` file, enter the code for making sure the same commands in the husky pre-commit hooks run when a commit is pushed to github.
+Add a file directory in the root named `.github` within that directory add a `workflows` folder.
+Within the `workflows` folder, add a file, it can be named anything, but the extension must be `.yml`
 
+Within the `.yml` file, enter the code for making sure the same commands in the husky pre-commit hooks run when a commit is pushed to github.
 
 # COMPONENT LIBRARY
 
@@ -190,6 +192,7 @@ ENV PATH /smith_chris_ui_garden_build_checks/node_modules/.bin:$PATH
 
 ENV HOST=0.0.0.0
 ENV PORT=8018
+
 > setting the host and environment port.
 
 COPY package.json ./
