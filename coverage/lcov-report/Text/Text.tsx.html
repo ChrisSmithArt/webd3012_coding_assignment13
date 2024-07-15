@@ -82,25 +82,23 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,27 +109,26 @@
 import styled from "styled-components";
 import { TextProps } from "./Text.types";
 &nbsp;
-&nbsp;
 const StyledText = styled.span&lt;Partial&lt;TextProps&gt;&gt;`
-  background: ${props =&gt; props.disabled? "grey" : "white"};
-  color: ${props =&gt; props.disabled? "light-grey" : "#BF4F74"};
-  cursor: ${props =&gt; props.disabled? "not-allowed" : "pointer"};
+  background: ${(props) =&gt; (props.disabled ? "grey" : "white")};
+  color: ${(props) =&gt; (props.disabled ? "light-grey" : "#BF4F74")};
+  cursor: ${(props) =&gt; (props.disabled ? "not-allowed" : "pointer")};
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  opacity:  ${props =&gt; props.disabled? "0.5" : "1.0"};
+  opacity: ${(props) =&gt; (props.disabled ? "0.5" : "1.0")};
 `;
 &nbsp;
-&nbsp;
-const Text = React.FC&lt;TextProps&gt; = ({title, backgroundColor, disabled}) =&gt; {
+const Text = (React.FC&lt;TextProps&gt; = ({ title, backgroundColor, disabled }) =&gt; {
   return (
     &lt;StyledText disabled={disabled} style={{ backgroundColor }}&gt;
       {title}
     &lt;/StyledText&gt;
-    );
-};
+  );
+});
 &nbsp;
-export default Text;</pre></td></tr></table></pre>
+export default Text;
+&nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
       <!-- for sticky footer -->
@@ -145,7 +142,7 @@ export default Text;</pre></td></tr></table></pre>
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-07-14T23:55:15.510Z
+      at 2024-07-15T00:02:37.138Z
     </div>
     <script src="../prettify.js"></script>
     <script>

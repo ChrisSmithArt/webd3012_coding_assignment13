@@ -85,26 +85,32 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,29 +121,32 @@
 import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
 &nbsp;
-&nbsp;
 const StyledButton = styled.button&lt;Partial&lt;ButtonProps&gt;&gt;`
-  background: ${props =&gt; props.disabled? "grey" : "white"};
-  color: ${props =&gt; props.disabled? "light-grey" : "#BF4F74"};
-  cursor: ${props =&gt; props.disabled? "not-allowed" : "pointer"};
+  background: ${(props) =&gt; (props.disabled ? "grey" : "white")};
+  color: ${(props) =&gt; (props.disabled ? "light-grey" : "#BF4F74")};
+  cursor: ${(props) =&gt; (props.disabled ? "not-allowed" : "pointer")};
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid #BF4F74;
+  border: 2px solid #bf4f74;
   border-radius: 3px;
-  opacity:  ${props =&gt; props.disabled? "0.5" : "1.0"};
+  opacity: ${(props) =&gt; (props.disabled ? "0.5" : "1.0")};
 `;
 &nbsp;
-&nbsp;
-const Button = React.FC&lt;ButtonProps&gt; = ({title, backgroundColor, disabled}) =&gt; {
+const Button = (React.FC&lt;ButtonProps&gt; = ({
+  title,
+  backgroundColor,
+  disabled,
+}) =&gt; {
   return (
     &lt;StyledButton disabled={disabled} style={{ backgroundColor }}&gt;
       {title}
     &lt;/StyledButton&gt;
-    );
-};
+  );
+});
 &nbsp;
-export default Button;</pre></td></tr></table></pre>
+export default Button;
+&nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
       <!-- for sticky footer -->
@@ -151,7 +160,7 @@ export default Button;</pre></td></tr></table></pre>
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-07-14T23:55:15.510Z
+      at 2024-07-15T00:02:37.138Z
     </div>
     <script src="../prettify.js"></script>
     <script>

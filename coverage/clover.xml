@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1721001315562" clover="3.2.0">
-  <project timestamp="1721001315563" name="All files">
+<coverage generated="1721001757201" clover="3.2.0">
+  <project timestamp="1721001757202" name="All files">
     <metrics statements="42" coveredstatements="42" conditionals="46" coveredconditionals="46" methods="30" coveredmethods="30" elements="118" coveredelements="118" complexity="0" loc="42" ncloc="42" packages="6" files="9" classes="9"/>
     <package name="Button">
       <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="Button.tsx" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Button/Button.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Card">
@@ -24,8 +24,8 @@
         <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
       </file>
       <file name="Card.types.ts" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Card/Card.types.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -40,9 +40,9 @@
         <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="26" count="6" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
       </file>
       <file name="Dropdown.types.ts" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Dropdown/Dropdown.types.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -52,12 +52,12 @@
       <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
       <file name="Label.tsx" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Label/Label.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Radio">
@@ -69,8 +69,8 @@
         <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
       </file>
       <file name="Radio.types.ts" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Radio/Radio.types.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -80,13 +80,13 @@
       <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="Text.tsx" path="/home/chris/BuildTest/ui_garden_2.0/webd3012_coding_assignment13/src/components/Text/Text.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
     </package>
   </project>

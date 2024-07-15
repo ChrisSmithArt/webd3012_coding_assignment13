@@ -82,23 +82,29 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,26 +115,29 @@
 import styled from "styled-components";
 import { LabelProps } from "./Label.types";
 &nbsp;
-&nbsp;
 const StyledLabel = styled.label&lt;Partial&lt;LabelProps&gt;&gt;`
-  color: ${props =&gt; props.disabled? "light-grey" : "#BF4F74"};
-  cursor: ${props =&gt; props.disabled? "not-allowed" : "pointer"};
+  color: ${(props) =&gt; (props.disabled ? "light-grey" : "#BF4F74")};
+  cursor: ${(props) =&gt; (props.disabled ? "not-allowed" : "pointer")};
   font-size: 2em;
   margin: 1em;
   padding: 0.25em 1em;
-  opacity:  ${props =&gt; props.disabled? "0.5" : "1.0"};
+  opacity: ${(props) =&gt; (props.disabled ? "0.5" : "1.0")};
 `;
 &nbsp;
-&nbsp;
-const Label = React.FC&lt;LabelProps&gt; = ({title, backgroundColor, disabled}) =&gt; {
+const Label = (React.FC&lt;LabelProps&gt; = ({
+  title,
+  backgroundColor,
+  disabled,
+}) =&gt; {
   return (
     &lt;StyledLabel disabled={disabled} style={{ backgroundColor }}&gt;
       {title}
     &lt;/StyledLabel&gt;
-    );
-};
+  );
+});
 &nbsp;
-export default Label;</pre></td></tr></table></pre>
+export default Label;
+&nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
       <!-- for sticky footer -->
@@ -142,7 +151,7 @@ export default Label;</pre></td></tr></table></pre>
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-07-14T23:55:15.510Z
+      at 2024-07-15T00:02:37.138Z
     </div>
     <script src="../prettify.js"></script>
     <script>

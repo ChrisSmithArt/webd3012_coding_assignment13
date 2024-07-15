@@ -87,7 +87,13 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,9 +113,15 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -124,26 +136,32 @@ export interface RadioProps {
 }
 &nbsp;
 const StyledRadio = styled.label&lt;Partial&lt;RadioProps&gt;&gt;`
-  background: ${props =&gt; props.disabled? "grey" : "papayawhip"};
-  color: ${props =&gt; props.disabled? "light-grey" : "#BF4F74"};
-  cursor: ${props =&gt; props.disabled? "not-allowed" : "pointer"};
+  background: ${(props) =&gt; (props.disabled ? "grey" : "papayawhip")};
+  color: ${(props) =&gt; (props.disabled ? "light-grey" : "#BF4F74")};
+  cursor: ${(props) =&gt; (props.disabled ? "not-allowed" : "pointer")};
   font-size: 1em;
   margin: 0.5em;
   padding: 0.5em;
   text-align: center;
   border-radius: 25px;
-  opacity:  ${props =&gt; props.disabled? "0.5" : "1.0"};
+  opacity: ${(props) =&gt; (props.disabled ? "0.5" : "1.0")};
 `;
 &nbsp;
+const Radio = (React.FC&lt;RadioProps&gt; = ({
+  title,
+  backgroundColor,
+  disabled,
+}) =&gt; {
+  return (
+    &lt;StyledRadio disabled={disabled} style={{ backgroundColor }}&gt;
+      &lt;input type="radio" name={name} disabled={disabled} /&gt;
+      {title}
+    &lt;/StyledRadio&gt;
+  );
+});
 &nbsp;
-const Radio = React.FC&lt;RadioProps&gt; = ({title, backgroundColor, disabled}) =&gt; {
-  return &lt;StyledRadio disabled={disabled} style={{ backgroundColor }}&gt;
-        &lt;input type="radio" name={name} disabled={disabled} /&gt;
-        {title}
-  &lt;/StyledRadio&gt;;
-};
-&nbsp;
-export default Radio;</pre></td></tr></table></pre>
+export default Radio;
+&nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
       <!-- for sticky footer -->
@@ -157,7 +175,7 @@ export default Radio;</pre></td></tr></table></pre>
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-07-14T23:55:15.510Z
+      at 2024-07-15T00:02:37.138Z
     </div>
     <script src="../prettify.js"></script>
     <script>
