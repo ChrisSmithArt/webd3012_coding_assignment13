@@ -35,6 +35,45 @@ Add babel for jest
 npm install --save-dev @babel/preset-typescript
 ```
 
+Add Husky for pre-commit checks/hooks
+
+```
+
+```
+
+Add Prettier for code formatting/readability
+```
+
+```
+
+Put precommit hooks into /.husky/pre-commit file
+```
+    npm run eslint . --ext ts,tsx --report-unused-disable-directives
+    npm run prettier . --check 
+    npm run prettier . --write 
+    npm run jest 
+```
+
+Also, in package.json these can be renamed in the following syntax
+
+```
+"scripts": {
+  ...
+  "format": "prettier . --write"
+  ...
+},
+```
+
+Adding eslint is not required because building a react app with vite includes eslint out of the box.
+
+
+# GITHUB ACTIONS
+Add a file directory in the root named ```.github``` within that directory add a ```workflows``` folder.
+Within the ```workflows``` folder, add a file, it can be named anything, but the extension must be ```.yml```
+
+Within the ```.yml``` file, enter the code for making sure the same commands in the husky pre-commit hooks run when a commit is pushed to github.
+
+
 # COMPONENT LIBRARY
 
 This project is a component library that has tests and can be viewed within Storybook.
@@ -141,13 +180,17 @@ FROM node:18-alpine
 
 > grabbing node:18
 
-WORKDIR /smith_chris_ui_garden
+WORKDIR /smith_chris_ui_garden_build_checks
 
 > setting the work directory: smith_chris_ui_garden
 
-ENV PATH /smith_chris_ui_garden/node_modules/.bin:$PATH
+ENV PATH /smith_chris_ui_garden_build_checks/node_modules/.bin:$PATH
 
 > declaring the environment path
+
+ENV HOST=0.0.0.0
+ENV PORT=8018
+> setting the host and environment port.
 
 COPY package.json ./
 
@@ -167,7 +210,7 @@ RUN npm install react-scripts@3.4.1 -g --silent
 
 COPY . ./
 
-> Copying everything in the current directory of 'smith_chris_ui_garden'
+> Copying everything in the current directory of 'smith_chris_ui_garden_build_checks'
 
 CMD ["npm", "run", "storybook"]
 
@@ -188,9 +231,9 @@ This command will mount the docker image from the Build step into a container.
 This will keep the application encapsulated within a Container, where we don't need to worry about conflicts.
 
 ```
-docker run -dp 8083:6006 --name smith_chris_coding_assignment12 csmith11:1.0
+docker run -dp 8018:6006 --name smith_chris_ui_garden_build_checks csmith11:1.0
 ```
 
 # ACCESS
 
-The application will be accessible at `http://localhost:8083`
+The application will be accessible at `http://localhost:8018`
